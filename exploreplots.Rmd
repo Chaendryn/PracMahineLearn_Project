@@ -1,0 +1,49 @@
+---
+title: "PredMachLearn - Exploratory Plots"
+author: "Yolande Korsten"
+date: "Wednesday, October 22, 2014"
+output: pdf_document
+---
+
+## Exploratory Pairs Plots
+
+
+```{r}
+modelTrain <- read.table("modelTrain.csv", header = TRUE, sep = ",", dec = ".", na.strings = "NA", stringsAsFactors = FALSE)
+
+modelTrain$classe <- as.factor(modelTrain$classe)
+```
+
+```{r fig.width=8, fig.height=8}
+library(caret)
+
+featurePlot(x = modelTrain[, 1:5], y = modelTrain$classe, plot = "pairs")
+featurePlot(x = modelTrain[, 6:10], y = modelTrain$classe, plot = "pairs")
+featurePlot(x = modelTrain[, 11:15], y = modelTrain$classe, plot = "pairs")
+featurePlot(x = modelTrain[, 16:20], y = modelTrain$classe, plot = "pairs")
+featurePlot(x = modelTrain[, 21:25], y = modelTrain$classe, plot = "pairs")
+featurePlot(x = modelTrain[, 26:30], y = modelTrain$classe, plot = "pairs")
+featurePlot(x = modelTrain[, 31:35], y = modelTrain$classe, plot = "pairs")
+featurePlot(x = modelTrain[, 36:40], y = modelTrain$classe, plot = "pairs")
+featurePlot(x = modelTrain[, 41:45], y = modelTrain$classe, plot = "pairs")
+featurePlot(x = modelTrain[, 46:50], y = modelTrain$classe, plot = "pairs")
+featurePlot(x = modelTrain[, 51:55], y = modelTrain$classe, plot = "pairs")
+featurePlot(x = modelTrain[, 56:60], y = modelTrain$classe, plot = "pairs")
+featurePlot(x = modelTrain[, 61:65], y = modelTrain$classe, plot = "pairs")
+featurePlot(x = modelTrain[, 66:70], y = modelTrain$classe, plot = "pairs")
+featurePlot(x = modelTrain[, 71:75], y = modelTrain$classe, plot = "pairs")
+featurePlot(x = modelTrain[, 76:80], y = modelTrain$classe, plot = "pairs")
+featurePlot(x = modelTrain[, 81:85], y = modelTrain$classe, plot = "pairs")
+featurePlot(x = modelTrain[, 86:90], y = modelTrain$classe, plot = "pairs")
+featurePlot(x = modelTrain[, 91:95], y = modelTrain$classe, plot = "pairs")
+featurePlot(x = modelTrain[, 96:100], y = modelTrain$classe, plot = "pairs")
+featurePlot(x = modelTrain[, 101:105], y = modelTrain$classe, plot = "pairs")
+featurePlot(x = modelTrain[, 106:110], y = modelTrain$classe, plot = "pairs")
+featurePlot(x = modelTrain[, 111:115], y = modelTrain$classe, plot = "pairs")
+featurePlot(x = modelTrain[, 116:120], y = modelTrain$classe, plot = "pairs")
+featurePlot(x = modelTrain[, 121:125], y = modelTrain$classe, plot = "pairs")
+
+
+
+```
+
